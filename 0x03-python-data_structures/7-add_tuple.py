@@ -11,6 +11,6 @@ def add_tuple(tuple_a=(), tuple_b=()):
         tuple_d = (0, 0) if len(tuple_b) == 0 else (tuple_b[0], 0)
     else:
         tuple_d = tuple_b
-    tuple_e = tuple_c[0] + tuple_d[0], tuple_c[1] + tuple_d[1]
+    tuple_e = (tuple_c[0] + tuple_d[0], tuple_c[1] + tuple_d[1])
     return tuple_e
 
