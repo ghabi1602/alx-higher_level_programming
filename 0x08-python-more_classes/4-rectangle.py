@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-"""define a rectangle"""
 
 
 class Rectangle:
@@ -46,7 +45,7 @@ class Rectangle:
             return 0
         return 2 * (self.__height + self.__width)
 
-    """define the str method that prints the rectangle to stdout"""
+    """define the __str__ method that prints the rectangle to stdout"""
     def __str__(self):
         if (self.__width == 0) or (self.__height == 0):
             return ""
@@ -56,3 +55,6 @@ class Rectangle:
                 rec = rec + "#"
             rec = rec + "\n"
         return rec
+    """define the __repr__ method that prints a string repr of the rectangle"""
+    def __repr__(self):
+        return f"Rectangle({self.__width}, {self.__height})"
