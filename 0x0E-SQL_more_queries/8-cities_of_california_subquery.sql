@@ -1,5 +1,4 @@
 -- lists all cities of california
-USE hbtn_0d_usa;
 SELECT id, name
 FROM cities
 WHERE state_id IN (
