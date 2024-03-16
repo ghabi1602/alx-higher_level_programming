@@ -9,8 +9,8 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    cur.execute("""SELECT * FROM {}
-                WHERE {} = {}""".format(states, name, sys.argv[4]))
+    cur.execute("""SELECT * FROM states
+                WHERE {} = {}""".format(name, sys.argv[4]))
 
     rows = cur.fetchall()
 
