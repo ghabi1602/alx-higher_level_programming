@@ -10,7 +10,7 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     cur.execute("""SELECT * FROM states
-                WHERE {} = {}""".format(name, sys.argv[4]))
+                WHERE {} LIKE BINARY '{}'""".format(name, sys.argv[4]))
 
     rows = cur.fetchall()
 
