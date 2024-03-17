@@ -11,8 +11,8 @@ if __name__ == "__main__":
 
     cur.execute("""SELECT name FROM cities
                 INNER JOIN states
-                ON cities.state_id = states.id
-                WHERE states.name LIKE {}
+                ON cities.state_id=states.id
+                WHERE states.name={}
                 ORDER BY cities.id""".format(sys.argv[4]))
 
     rows = cur.fetchall()
