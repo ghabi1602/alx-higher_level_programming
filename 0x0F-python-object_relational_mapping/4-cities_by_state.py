@@ -13,7 +13,7 @@ if __name__ == "__main__":
     cur.execute("""SELECT cities.id, cities.name, states.name
                 FROM cities
                 INNER JOIN states
-                ON states.id=cities.states_id""")
+                ON states.id=cities.state_id""")
 
     rows = cur.fetchall()
 
