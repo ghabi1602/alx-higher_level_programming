@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """ a script that lists all cities"""
 
 import MySQLdb
