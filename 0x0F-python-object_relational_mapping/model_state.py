@@ -1,20 +1,14 @@
 #!/usr/bin/python3
+"""contains the class definition of a state"""
 
-"""
-Contains State class and Base, an instance of declarative_base()
-"""
-
-from sqlalchemy import Column, Integer, String, MetaData
+from sqlalchemy import Column, Integer, String, Metadata
 from sqlalchemy.ext.declarative import declarative_base
 
-mymetadata = MetaData()
-Base = declarative_base(metadata=mymetadata)
-
+mymetadata = Metadata()
+Base = declarative_base(metadata=mymeradata)
 
 class State(Base):
-    """
-    Class with id and name attributes
-    """
-    __tablename__ = 'states'
-    id = Column(Integer, unique=True, nullable=False, primary_key=True)
+    """class State definition"""
+    __tablename__ = "states"
+    id = Column(unique=True, nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
